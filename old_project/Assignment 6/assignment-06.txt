@@ -1,0 +1,62 @@
+orders
+[
+  {
+    "_id": "609e4393f4ed20626440915a",
+    "custid": "609c251a3ac5f803082f8a47",
+    "phone1": "609c62cda03a055424066e94",
+    "phone2": "609c6361a03a055424066e95",
+    "createdAt": "2021-05-14T09:32:03.939Z",
+    "updatedAt": "2021-05-14T09:32:54.638Z",
+    "__v": 0,
+    "phone3": null,
+    "phone4": null,
+    "phone5": null
+  }
+]
+
+customers
+[
+  {
+    "_id": "609c251a3ac5f803082f8a47",
+    "title": "Ms",
+    "fname": "Sadhbh",
+    "surname": "Richmonds",
+    "mobile": "083333333",
+    "email": "jonas@john.john",
+    "haddress1": "126",
+    "haddress2": "Baker Street",
+    "htown": "1",
+    "hcounty": "2",
+    "heircode": "3",
+    "saddress1": "1",
+    "saddress2": "5",
+    "stown": "6",
+    "scounty": "7",
+    "seircode": "8",
+    "createdAt": "2021-05-12T18:57:30.080Z",
+    "updatedAt": "2021-05-12T18:57:30.080Z",
+    "__v": 0
+  }
+]
+
+phones
+[
+  {
+    "_id": "609c62cda03a055424066e94",
+    "manufacturer": "OnePlus",
+    "model": "10",
+    "price": "700",
+    "createdAt": "2021-05-12T23:20:45.107Z",
+    "updatedAt": "2021-05-12T23:20:45.107Z",
+    "__v": 0
+  },
+  {
+    "_id": "609c6361a03a055424066e95",
+    "manufacturer": "Samsung",
+    "model": "S9",
+    "price": "1000",
+    "createdAt": "2021-05-12T23:23:13.167Z",
+    "updatedAt": "2021-05-12T23:24:52.652Z",
+    "__v": 0
+  }
+]
