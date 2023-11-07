@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
   res.json(data);
 });
 
-app.get('/getapigateway', (req, res) => {
+app.get('/testpod', (req, res) => {
   axios.get('https://jsonplaceholder.typicode.com/todos/1')
     .then(response => {
       const data = response.data;
@@ -28,16 +28,8 @@ app.get('/getapigateway', (req, res) => {
     });
 });
 
-app.get('/message-pod', (req, res) => {
-  axios.get('http://localhost:4000/testpod')
-    .then(response => {
-      const data = response.data;
-      // Use the data object as needed
-      res.json(data);
-    })
-    .catch(error => {
-      console.error('Error:', error.message);
-    });
+app.get('/updatefile', (req, res) => {
+  res.json(test_post);
 })
 
 app.post('/test-post', (req, res) => {
@@ -45,7 +37,7 @@ app.post('/test-post', (req, res) => {
   res.json(data);
 })
 
-const port = 3000;
+const port = 4000;
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
