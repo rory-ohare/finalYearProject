@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   res.json(data);
 });
 
-app.get('/getapi', (req, res) => {
+app.get('/getapigateway', (req, res) => {
   axios.get('https://jsonplaceholder.typicode.com/todos/1')
     .then(response => {
       const data = response.data;
@@ -23,6 +23,11 @@ app.get('/getapi', (req, res) => {
       console.error('Error:', error.message);
     });
 });
+
+app.get('/updatefile', (req, res) => {
+  const data = './requests/test.json';
+  res.json(data);
+})
 
 app.post('/test-post', (req, res) => {
   const data = req.body;
