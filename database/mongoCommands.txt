@@ -1,0 +1,17 @@
+db.users.insert({
+
+    username: 'user2',
+
+    password: 'password2',
+
+    email: 'user2@example.com',
+
+    accountDetails: {
+
+        balance: 600.5,
+
+        key2: 'value2'
+
+    }
+
+})
