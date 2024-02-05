@@ -1,5 +1,5 @@
 module.exports = {
     database: {
-        url: "mongodb+srv://rohare:myPassword@nimbus.fyfevdu.mongodb.net/?retryWrites=true&w=majority"
+        url: "mongodb+srv://rohare:myPassword@nimbus.fyfevdu.mongodb.net/accounts?retryWrites=true&w=majority"
     }
 }
