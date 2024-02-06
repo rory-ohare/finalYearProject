@@ -5,24 +5,15 @@ var bcrypt = require('bcrypt-nodejs');
 
 // create a mongoose schema for a quotation
 const userSchema = mongoose.Schema({
-    username: {
+    userId: {
         type: String,
         required: true,
+        match: [/^\d{8}$/, 'User ID must consist of 8 numbers']
     },
     password: {
         type: String,
         required: true,
-    },
-    email: {
-        type: String,
-        required: true,
-    },
-    accountDetails: {
-        balance: {
-            type: Number,
-            required: true,
-        },
-    },
+    }
 });
 
 // Hash the password

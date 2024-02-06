@@ -15,15 +15,14 @@ exports.findAllUsers = async (req, res) => {
 };
 
 // Find a Specific User
-exports.findUserByUsernameAndPassword = async (req, res) => {
+exports.findUser = async (req, res) => {
     try {
         const user = await User.findOne({
-            username: req.body.username,
-            password: req.body.password // Assuming the password is stored in plain text. Never store passwords in plain text!
+            userId: req.body.userId
         });
 
         if (!user) {
-            return res.status(404).send({ message: 'No user found with this username and password.' });
+            return res.status(404).send({ message: 'No user found with this userId and password.' });
         }
 
         res.send(user);
@@ -41,12 +40,7 @@ exports.findUserByUsernameAndPassword = async (req, res) => {
 exports.createUser = async (req, res) => {
     try {
         const user = new User({
-            username: "user4",
-            //password: "test", // Make sure to hash the password before saving!
-            email: "user2@email.com",
-            accountDetails: {
-                balance: 800,
-            },
+            userId: req.body.userId
         });
 
         user.password = user.generateHash("myPassword");
@@ -62,21 +56,21 @@ exports.createUser = async (req, res) => {
 // Login a Specific User
 exports.login = async (req, res) => {
     try {
-        const user = await User.findOne({ username: req.body.username });
+        const user = await User.findOne({ userId: req.body.userId });
 
         if (user && user.validPassword(req.body.password)) {
             // Password matched. Proceed forward
             console.log("Password Matched!");
 
             // Generate a JWT
-            const token = jwt.sign({ id: user._id, username: user.username }, 'mySecretKey', { expiresIn: '1h' });
+            const token = jwt.sign({ id: user._id, userId: user.userId }, 'mySecretKey', { expiresIn: '1h' });
 
             // Return the JWT in the response
             res.json({ token });
         } else {
             // Password did not match
             console.log("Password Didn't Match");
-            res.status(401).json({ message: 'Authentication failed. Invalid username or password.' });
+            res.status(401).json({ message: 'Authentication failed. Invalid userId or password.' });
         }
     } catch (err) {
         // Handle errors
@@ -90,7 +84,6 @@ exports.verifyJWT = (req, res) => {
     try {
         // Get the token from the request headers
         const authHeader = req.headers['authorization'];
-        console.log(authHeader)
 
         if (!authHeader) {
             return res.status(401).json({ message: 'Authorization header is missing.' });

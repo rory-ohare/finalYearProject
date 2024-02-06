@@ -5,13 +5,13 @@ module.exports = (app) => {
     app.get('/get-users', users.findAllUsers)
 
     //Create a new User
-    app.get('/create-user', users.createUser)
+    app.post('/create-user', users.createUser)
 
-    //Decode JWT
+    //Verify JWT
     app.get('/jwt-verify', users.verifyJWT)
 
     //Find a Specific User
-    app.post('/find-user', users.findUserByUsernameAndPassword)
+    app.post('/find-user', users.findUser)
 
     //Login
     app.post('/login', users.login)
