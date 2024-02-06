@@ -43,7 +43,7 @@ exports.createUser = async (req, res) => {
             userId: req.body.userId
         });
 
-        user.password = user.generateHash("myPassword");
+        user.password = user.generateHash(req.body.password);
         const data = await user.save();
         res.send(data);
     } catch (err) {
@@ -70,7 +70,7 @@ exports.login = async (req, res) => {
         } else {
             // Password did not match
             console.log("Password Didn't Match");
-            res.status(401).json({ message: 'Authentication failed. Invalid userId or password.' });
+            res.status(401).json({ message: 'Authentication failed. Invalid username or password.' });
         }
     } catch (err) {
         // Handle errors
