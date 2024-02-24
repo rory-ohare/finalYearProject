@@ -2,6 +2,6 @@ POST http://localhost:3000/create-user HTTP/1.1
 content-type: application/json
 
 {
-    "userId": "12345678",
-    "password": "test-password"
+    "userId": "98765673",
+    "password": "le-password"
 }
