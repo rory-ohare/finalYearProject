@@ -23,7 +23,7 @@ mongoose.connect(dbConnect.database.url)
 //Import routes
 require('./app/routes/routes.js')(app);
 
-const port = 3000;
+const port = 4000;
 app.listen(port, () => {
   console.log(`Transfer Server listening on port ${port}`);
 });
