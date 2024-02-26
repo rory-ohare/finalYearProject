@@ -22,7 +22,7 @@ exports.findUser = async (req, res) => {
         });
 
         if (!user) {
-            return res.status(404).send({ message: 'No user found with this userId and password.' });
+            return res.status(404).send({ message: 'No user found with this userId.' });
         }
 
         res.send(user);
@@ -39,9 +39,9 @@ exports.findUser = async (req, res) => {
 // Create Users
 exports.createUser = async (req, res) => {
     try {
-        const user = new User({
-            userId: req.body.userId
-        });
+        const { userId } = req.body;
+        const user = new User({ userId });
+
 
         user.password = user.generateHash(req.body.password);
         const data = await user.save();
