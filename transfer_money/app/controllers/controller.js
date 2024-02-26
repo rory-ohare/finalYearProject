@@ -59,7 +59,7 @@ exports.getBalance = async (req, res) => {
         // Find the sender and receiver users
         const user = await Balance.findOne({ userId });
 
-        // Check if both users exist
+        // Check if user exist
         if (!user) {
             return res.status(404).send({ message: 'User not found.' });
         }
@@ -68,5 +68,31 @@ exports.getBalance = async (req, res) => {
     } catch (err) {
         console.error(err);
         res.status(500).send({ message: 'An error occurred while getting balance.' });
+    }
+};
+
+// Increase Balance
+exports.increaseBalance = async (req, res) => {
+    try {
+        const { userId, amount } = req.body;
+
+        // Find the user
+        const user = await Balance.findOne({ userId });
+
+        // Check if user exist
+        if (!user) {
+            return res.status(404).send({ message: 'User not found.' });
+        }
+
+        // Add the amount to the receiver's balance
+        user.balance += amount;
+
+        // Save the updated users
+        await user.save();
+
+        res.send({ message: 'Money added successfully.' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send({ message: 'An error occurred while processing the top-up.' });
     }
 };

@@ -9,4 +9,7 @@ module.exports = (app) => {
 
     // Get Balance
     app.post('/get-balance', users.getBalance)
+
+    // Top-up account
+    app.post('/top-up', users.increaseBalance)
 }
