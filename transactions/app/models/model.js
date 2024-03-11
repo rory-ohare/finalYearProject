@@ -1,22 +1,10 @@
 const mongoose = require('mongoose');
 
-const userSchema = mongoose.Schema({
+const transactionSchema = mongoose.Schema({
     userId: {
         type: String,
         required: true,
         match: [/^\d{8}$/, 'User ID must consist of 8 numbers']
-    },
-    password: {
-        type: String,
-        required: true,
-    }
-});
-
-
-const transactionSchema = mongoose.Schema({
-    userId: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
     },
     date: {
         type: Date,
@@ -38,5 +26,4 @@ const transactionSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('User', userSchema);
 module.exports = mongoose.model('Transaction', transactionSchema);

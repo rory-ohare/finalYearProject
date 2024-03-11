@@ -1,0 +1,9 @@
+POST http://localhost:5000/create-transaction HTTP/1.1
+content-type: application/json
+
+{
+    "userId": "12345678",
+    "transactionType": "credit",
+    "amount": 3210,
+    "description": "Test transaction"
+}
