@@ -1,51 +1,15 @@
 const express = require('express');
-const axios = require('axios');
-const test_post = require('./requests/test.json');
-
-
-
-
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 const app = express();
 
-app.get('/', (req, res) => {
-  const data = {
-    message: 'Hello World!',
-    timestamp: new Date().toUTCString()
-  };
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
-  res.json(data);
-});
+//Import routes
+require('./app/routes/routes.js')(app);
 
-app.get('/getapigateway', (req, res) => {
-  axios.get('https://jsonplaceholder.typicode.com/todos/1')
-    .then(response => {
-      const data = response.data;
-      // Use the data object as needed
-      res.json(data);
-    })
-    .catch(error => {
-      console.error('Error:', error.message);
-    });
-});
-
-app.get('/message-pod', (req, res) => {
-  axios.get('http://localhost:4000/testpod')
-    .then(response => {
-      const data = response.data;
-      // Use the data object as needed
-      res.json(data);
-    })
-    .catch(error => {
-      console.error('Error:', error.message);
-    });
-})
-
-app.post('/test-post', (req, res) => {
-  const data = req.body;
-  res.json(data);
-})
-
-const port = 3000;
+const port = 9000;
 app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+  console.log(`Transaction Server listening on port ${port}`);
 });

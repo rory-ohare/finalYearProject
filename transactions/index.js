@@ -25,5 +25,5 @@ require('./app/routes/routes.js')(app);
 
 const port = 5000;
 app.listen(port, () => {
-  console.log(`Transfer Server listening on port ${port}`);
+  console.log(`Transaction Server listening on port ${port}`);
 });
