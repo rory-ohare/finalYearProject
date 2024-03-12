@@ -5,7 +5,8 @@ const balanceSchema = mongoose.Schema({
     userId: {
         type: String,
         required: true,
-        match: [/^\d{8}$/, 'User ID must consist of 8 numbers']
+        match: [/^\d{8}$/, 'User ID must consist of 8 numbers'],
+        unique: true
     },
     balance: {
         type: Number,

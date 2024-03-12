@@ -2,7 +2,7 @@ POST http://localhost:4000/transfer HTTP/1.1
 content-type: application/json
 
 {
-    "senderId": "98765673",
+    "userId": "98765673",
     "receiverId": "12345678",
     "amount": 400
 }

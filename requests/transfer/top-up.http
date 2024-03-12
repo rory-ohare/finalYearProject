@@ -1,0 +1,7 @@
+POST http://localhost:9000/top-up HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZGExNjhhYjZkOWI4MWRjMzA4NWRkZCIsInVzZXJJZCI6Ijk4NzY1NjczIiwiaWF0IjoxNzEwMjYwMjU2LCJleHAiOjE3MTAyNjM4NTZ9.DdAOApb1c1H1npjq-9IZ29pUEE2Zcr2rhiHQYazSEFo
+
+{
+    "amount": 444
+}

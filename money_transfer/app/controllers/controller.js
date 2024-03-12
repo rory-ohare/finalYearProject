@@ -19,10 +19,10 @@ exports.createBalance = async (req, res) => {
 // Transfer Money Between Users
 exports.transferMoney = async (req, res) => {
     try {
-        const { senderId, receiverId, amount } = req.body;
+        const { userId, receiverId, amount } = req.body;
 
         // Find the sender and receiver users
-        const sender = await Balance.findOne({ userId: senderId });
+        const sender = await Balance.findOne({ userId: userId });
         const receiver = await Balance.findOne({ userId: receiverId });
 
         // Check if both users exist
