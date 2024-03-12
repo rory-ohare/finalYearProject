@@ -7,7 +7,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 //Import routes
-require('./app/routes/routes.js')(app);
+require('./app/routes/login-routes.js')(app);
+require('./app/routes/transfer-routes.js')(app);
 
 const port = 9000;
 app.listen(port, () => {

@@ -36,7 +36,7 @@ exports.findUser = async (req, res) => {
 
 
 
-// Create Users
+// Create User
 exports.createUser = async (req, res) => {
     try {
         const { userId } = req.body;
