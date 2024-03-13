@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: transfer-deployment
+spec:
+ replicas: 1
+ selector:
+    matchLabels:
+      app: transfer
+ template:
+    metadata:
+      labels:
+        app: transfer
+    spec:
+      containers:
+      - name: transfer
+        image: rohare999/transfer:latest
+        ports:
+        - containerPort: 4000
