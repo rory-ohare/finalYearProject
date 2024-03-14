@@ -1,5 +1,5 @@
 const functions = require('./functions');
-const loginURL = "http://localhost:4000";
+const loginURL = "http://transfer-service.default.svc.cluster.local:4000";
 const secretKey = "mySecretKey";
 
 // Login a Specific User

@@ -1,5 +1,5 @@
 const functions = require('./functions');
-const loginURL = "http://localhost:5000";
+const loginURL = "http://transactions-service.default.svc.cluster.local:5000";
 const secretKey = "mySecretKey";
 
 // Create Transaction

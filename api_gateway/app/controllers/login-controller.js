@@ -1,5 +1,6 @@
 const functions = require('./functions');
-const loginURL = "http://localhost:3000";
+//const loginURL = "http://localhost:3000";
+const loginURL = "http://login-service.default.svc.cluster.local:3000";
 
 // Login a Specific User
 exports.login = async (req, res) => {

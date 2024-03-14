@@ -1,0 +1,4 @@
+docker build -t your-image-name .
+docker login
+docker tag your-image-name:latest your-dockerhub-username/your-image-name:latest
+docker push your-dockerhub-username/your-image-name:latest

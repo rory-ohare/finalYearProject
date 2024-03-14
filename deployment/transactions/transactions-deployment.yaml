@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: transactions-deployment
+spec:
+ replicas: 1
+ selector:
+    matchLabels:
+      app: transactions
+ template:
+    metadata:
+      labels:
+        app: transactions
+    spec:
+      containers:
+      - name: transactions
+        image: rohare999/transactions:latest
+        ports:
+        - containerPort: 5000
