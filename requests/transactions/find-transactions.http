@@ -1,9 +1,9 @@
 //POST http://localhost:9000/find-transactions HTTP/1.1
 //http://192.168.49.2:30118
-POST http://192.168.49.2:30118/find-transactions HTTP/1.1
+POST http://192.168.49.2:30007/find-transactions HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZGExNjhhYjZkOWI4MWRjMzA4NWRkZCIsInVzZXJJZCI6Ijk4NzY1NjczIiwiaWF0IjoxNzEwMzc5OTgxLCJleHAiOjE3MTAzODM1ODF9.uOaey9o8LUnbHGcfWVdoxrBuBX5G06Tau4E3zMdu8c0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZGExNjhhYjZkOWI4MWRjMzA4NWRkZCIsInVzZXJJZCI6Ijk4NzY1NjczIiwiaWF0IjoxNzEwNDMyNzkzLCJleHAiOjE3MTA0MzYzOTN9.Jm5vdry5MmeL0JUR3AE6cid-L74iksytzukmJNh5nDU
 
 {
-    "transactionType": "debit"
+    //"transactionType": "debit"
 }
