@@ -1,0 +1,8 @@
+minikube kubectl -- apply -f ../transfer/transfer-deployment.yaml
+minikube kubectl -- apply -f ../transfer/transfer-service.yaml
+minikube kubectl -- apply -f ../api-gateway/gateway-deployment.yaml
+minikube kubectl -- apply -f ../api-gateway/gateway-service.yaml
+minikube kubectl -- apply -f ../transactions/transactions-deployment.yaml
+minikube kubectl -- apply -f ../transactions/transactions-service.yaml
+minikube kubectl -- apply -f ../login/login-deployment.yaml
+minikube kubectl -- apply -f ../login/login-service.yaml

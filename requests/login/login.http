@@ -1,6 +1,10 @@
 //POST http://localhost:9000/login HTTP/1.1
 //http://192.168.49.2:32418
+<<<<<<< HEAD
 POST http://192.168.49.2:30007/login HTTP/1.1
+=======
+POST http://192.168.49.2:31936/login HTTP/1.1
+>>>>>>> b578074 (deleted node_modules folder)
 content-type: application/json
 
 {
