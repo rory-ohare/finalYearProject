@@ -1,0 +1,99 @@
+Document Path:          /login
+Document Length:        209 bytes
+
+Concurrency Level:      10
+Time taken for tests:   456.112 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      4170000 bytes
+Total body sent:        2030000
+HTML transferred:       2090000 bytes
+Requests per second:    21.92 [#/sec] (mean)
+Time per request:       456.112 [ms] (mean)
+Time per request:       45.611 [ms] (mean, across all concurrent requests)
+Transfer rate:          8.93 [Kbytes/sec] received
+                        4.35 kb/s sent
+                        13.27 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:    83  455  81.9    451    1682
+Waiting:       83  455  81.9    451    1681
+Total:         83  455  81.9    451    1682
+
+Percentage of the requests served within a certain time (ms)
+  50%    451
+  66%    470
+  75%    486
+  80%    498
+  90%    537
+  95%    581
+  98%    654
+  99%    709
+ 100%   1682 (longest request)
+
+gateway 1 - login 1
+
+---------------------------------------------------------------
+gateway 5 - login 5
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:    58  140  63.4    124    1364
+Waiting:       58  140  63.4    124    1363
+Total:         59  140  63.4    125    1364
+
+Percentage of the requests served within a certain time (ms)
+  50%    125
+  66%    154
+  75%    167
+  80%    187
+  90%    215
+  95%    242
+  98%    281
+  99%    317
+ 100%   1364 (longest request)
+
+---------------------------------------------------------------
+gateway 5 - login 1
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:    76  436  88.5    426    1355
+Waiting:       76  436  88.5    426    1355
+Total:         76  436  88.5    427    1355
+
+Percentage of the requests served within a certain time (ms)
+  50%    427
+  66%    453
+  75%    467
+  80%    477
+  90%    534
+  95%    590
+  98%    682
+  99%    740
+ 100%   1355 (longest request)
+
+---------------------------------------------------------------
+gateway 1 - login 5
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       1
+Processing:    61  122  39.7    118    1116
+Waiting:       61  122  39.7    118    1116
+Total:         61  122  39.7    118    1117
+
+Percentage of the requests served within a certain time (ms)
+  50%    118
+  66%    127
+  75%    149
+  80%    153
+  90%    162
+  95%    173
+  98%    200
+  99%    215
+ 100%   1117 (longest request)

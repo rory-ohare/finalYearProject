@@ -1,9 +1,9 @@
-POST http://localhost:9000/create-transaction HTTP/1.1
+POST http://192.168.49.2:30637/create-transaction HTTP/1.1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZGExNjhhYjZkOWI4MWRjMzA4NWRkZCIsInVzZXJJZCI6Ijk4NzY1NjczIiwiaWF0IjoxNzEwMjY0NDczLCJleHAiOjE3MTAyNjgwNzN9.af6mCSClZwK_otYj-b_wdW60OQrHLmgyF5lxBEQQTtM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZGExNjhhYjZkOWI4MWRjMzA4NWRkZCIsInVzZXJJZCI6Ijk4NzY1NjczIiwiaWF0IjoxNzExNjcxODc0LCJleHAiOjE3MTE2NzU0NzR9.BpLeVJdv_eup1arGxuzfLUbkkcM-i929V7A29gFh-qI
 
 {
     "transactionType": "debit",
     "amount": 111,
-    "description": "API-Gateway Test"
+    "description": "Demonstration Video"
 }

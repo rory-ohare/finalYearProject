@@ -9,7 +9,6 @@ exports.getBalance = async (req, res) => {
         req.body.userId = userId;
         functions.receiveAndForward(req, res, loginURL + "/get-balance");
     } catch (err) {
-        // Handle errors
         console.error(err);
         res.status(500).json({ message: 'An error occurred while processing the balance request.' });
     }
@@ -22,7 +21,6 @@ exports.increaseBalance = async (req, res) => {
         req.body.userId = userId;
         functions.receiveAndForward(req, res, loginURL + "/top-up");
     } catch (err) {
-        // Handle errors
         console.error(err);
         res.status(500).json({ message: 'An error occurred while processing the balance request.' });
     }
@@ -35,7 +33,6 @@ exports.transferMoney = async (req, res) => {
         req.body.userId = userId;
         functions.receiveAndForward(req, res, loginURL + "/transfer");
     } catch (err) {
-        // Handle errors
         console.error(err);
         res.status(500).json({ message: 'An error occurred while processing the balance request.' });
     }
@@ -48,7 +45,6 @@ exports.createBalance = async (req, res) => {
         req.body.userId = userId;
         functions.receiveAndForward(req, res, loginURL + "/create-balance");
     } catch (err) {
-        // Handle errors
         console.error(err);
         res.status(500).json({ message: 'An error occurred while processing the balance request.' });
     }

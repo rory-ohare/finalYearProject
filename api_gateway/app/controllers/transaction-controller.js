@@ -9,7 +9,6 @@ exports.createTransaction = async (req, res) => {
         req.body.userId = userId;
         functions.receiveAndForward(req, res, loginURL + "/create-transaction");
     } catch (err) {
-        // Handle errors
         console.error(err);
         res.status(500).json({ message: 'An error occurred while processing the balance request.' });
     }
@@ -22,7 +21,6 @@ exports.getTransactionsByUserId = async (req, res) => {
         req.body.userId = userId;
         functions.receiveAndForward(req, res, loginURL + "/find-transactions");
     } catch (err) {
-        // Handle errors
         console.error(err);
         res.status(500).json({ message: 'An error occurred while processing the balance request.' });
     }
